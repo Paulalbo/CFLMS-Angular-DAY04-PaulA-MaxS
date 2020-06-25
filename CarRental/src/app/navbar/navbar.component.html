@@ -1,0 +1,26 @@
+<nav class="sticky-top navbar navbar-expand-lg navbar-light flex-grow-1">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-left" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto flex-nowrap">
+            <li class="nav-item"><a class="nav-link" routerLink="/home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/blog">BLOG</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/about">ABOUT</a></li>
+        </ul>
+        <ng-template [ngIf]="count >= 200">
+
+            <ul class="vip m-auto navbar-nav flex-nowrap">
+                <li><p><b>VIP</b> STATUS</p></li>
+            </ul>
+    
+        </ng-template>
+        <div class="ml-auto">
+            <p>YOUR DONATIONS: <span id="showdonation">{{count}}</span>$
+            <button (click)="clickCount()" id="donate">DONATE 10$</button></p>
+        </div>
+    </div>
+  </nav>
+
+  
